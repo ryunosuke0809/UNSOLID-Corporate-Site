@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with UNSOLID Inc. for partnerships, product inquiries, and press.">
+    <title>Contact | UNSOLID Inc.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><span>UN</span>SOLID</a>
+            </div>
+            <div class="nav-wrapper">
+                <nav class="main-nav">
+                    <div class="nav-item has-dropdown">
+                        <a href="about.html" class="nav-link has-caret">Company</a>
+                        <div class="dropdown">
+                            <a href="about.html">Overview</a>
+                            <a href="achievements.html">Achievements</a>
+                            <a href="vision.html">Vision</a>
+                        </div>
+                    </div>
+                    <div class="nav-item has-dropdown">
+                        <a href="video-tech.html" class="nav-link has-caret">Business</a>
+                        <div class="dropdown">
+                            <a href="video-tech.html">Video Tech</a>
+                            <a href="it.html">IT</a>
+                            <a href="oil.html">Racing Parts Sales</a>
+                            <a href="pet.html">Pet Business</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="contact.html" class="nav-link active">Contact</a>
+                    </div>
+                </nav>
+                <div class="language-switcher">
+                    <a href="../jp/contact.html">JP</a>
+                    <span class="separator">|</span>
+                    <a href="../en/contact.html" class="active">EN</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-nav">
+        <a href="index.html" class="mobile-nav-single">Home</a>
+        <div class="mobile-nav-group">
+            <span class="mobile-nav-group-title">Company</span>
+            <a href="about.html" class="mobile-nav-sub-link">Overview</a>
+            <a href="achievements.html" class="mobile-nav-sub-link">Achievements</a>
+            <a href="vision.html" class="mobile-nav-sub-link">Vision</a>
+        </div>
+        <div class="mobile-nav-group">
+            <span class="mobile-nav-group-title">Business</span>
+            <a href="video-tech.html" class="mobile-nav-sub-link">Video Tech</a>
+            <a href="it.html" class="mobile-nav-sub-link">IT</a>
+            <a href="oil.html" class="mobile-nav-sub-link">Racing Parts Sales</a>
+            <a href="pet.html" class="mobile-nav-sub-link">Pet Business</a>
+        </div>
+        <a href="contact.html" class="mobile-nav-single active">Contact</a>
+        <div class="language-switcher">
+            <a href="../jp/contact.html">JP</a>
+            <span class="separator">|</span>
+            <a href="../en/contact.html" class="active">EN</a>
+        </div>
+    </nav>
+    <div class="nav-overlay"></div>
+
+    <section class="hero" style="min-height:60vh;">
+        <div class="hero-content fade-in">
+            <h1>Let’s create the next racing experience together</h1>
+            <p class="tagline">We welcome partnership, product, and media inquiries</p>
+            <p style="max-width:720px;margin:0 auto;color:var(--color-text-secondary);">
+                Whether you are exploring iZCast deployments, digital fan engagement, racing oil distribution, or pet lifestyle products, UNSOLID is ready to collaborate.
+            </p>
+        </div>
+    </section>
+
+    <section style="padding-top:var(--spacing-2xl);padding-bottom:var(--spacing-2xl);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-eyebrow">CONTACT OPTIONS</p>
+                <h2>How to reach us</h2>
+            </div>
+            <div class="business-grid">
+                <div class="business-card-modern fade-in">
+                    <h3>Email</h3>
+                    <p>info@unsolid.co.jp<br>We reply during business hours (JST)</p>
+                    <a href="mailto:info@unsolid.co.jp" class="btn btn-secondary">Send an email →</a>
+                </div>
+                <div class="business-card-modern fade-in" style="animation-delay:0.1s;">
+                    <h3>Office</h3>
+                    <p>249 Hikida, Ichihara-shi<br>Chiba 290-0256, Japan</p>
+                    <a href="https://maps.app.goo.gl/" target="_blank" rel="noopener" class="btn btn-secondary">View on Maps →</a>
+                </div>
+                <div class="business-card-modern fade-in" style="animation-delay:0.2s;">
+                    <h3>Business hours</h3>
+                    <p>Monday – Friday 10:00–18:00 JST<br>* Subject to change during race weeks</p>
+                    <span class="badge">For urgent matters, please email us</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background:var(--color-bg-secondary);padding-top:var(--spacing-2xl);padding-bottom:var(--spacing-2xl);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-eyebrow">CONTACT FORM</p>
+                <h2>Send us a message</h2>
+                <p class="section-description">Fill out the form and we will respond within two business days.</p>
+            </div>
+            <div class="form-card fade-in">
+                <form id="contact-form" class="contact-form" method="POST" action="send.php" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell us about your project or request." required></textarea>
+                    </div>
+                    <p class="form-note">Your information is transmitted securely. We will follow up via email.</p>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top:var(--spacing-2xl);padding-bottom:var(--spacing-2xl);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <p class="section-eyebrow">NEXT STEPS</p>
+                <h2>Common inquiries</h2>
+            </div>
+            <div class="business-grid">
+                <div class="business-card-modern fade-in">
+                    <h3>iZCast & live video</h3>
+                    <p>Low-latency streaming, race control visibility, and distributed team viewing.</p>
+                </div>
+                <div class="business-card-modern fade-in" style="animation-delay:0.1s;">
+                    <h3>Motorsport digital products</h3>
+                    <p>Apps, hybrid event operations, and data-integrated fan experiences.</p>
+                </div>
+                <div class="business-card-modern fade-in" style="animation-delay:0.2s;">
+                    <h3>Product distribution</h3>
+                    <p>RAGNO racing oil partnerships, ONE BRUSH retail, and OEM collaborations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h4>Business</h4>
+                    <a href="video-tech.html">Video Technology</a>
+                    <a href="it.html">IT Solutions</a>
+                    <a href="oil.html">Racing Parts</a>
+                    <a href="pet.html">Pet Business</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="about.html">About</a>
+                    <a href="achievements.html">Achievements</a>
+                    <a href="vision.html">Vision</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="contact.html">Contact Form</a>
+                    <a href="mailto:info@unsolid.co.jp">info@unsolid.co.jp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 UNSOLID Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
