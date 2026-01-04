@@ -777,151 +777,22 @@ header.scrolled {
     }
 }
 
-.business-icon-modern {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    border-radius: 1.5rem;
-    margin-bottom: var(--spacing-md);
-    background: var(--color-bg-primary);
-    border: 2px solid var(--color-border);
-    position: relative;
-    z-index: 1;
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    overflow: hidden;
-}
-
-.business-icon-modern::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-primary);
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 50%;
-    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-    z-index: -1;
-}
-
-.business-icon-modern::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: var(--gradient-primary);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.business-card-modern:hover .business-icon-modern {
-    transform: scale(1.15) rotate(5deg);
-    border-color: transparent;
-    box-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
-}
-
-.business-card-modern:hover .business-icon-modern::before {
-    transform: translate(-50%, -50%) scale(2);
-}
-
-.business-card-modern:hover .business-icon-modern::after {
-    opacity: 1;
-}
-
-/* Icon SVG Content */
-.business-icon-modern svg {
-    width: 2rem;
-    height: 2rem;
-    stroke: var(--color-accent-primary);
-    transition: all 0.5s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.business-icon-modern svg path,
-.business-icon-modern svg rect,
-.business-icon-modern svg circle,
-.business-icon-modern svg ellipse {
-    transition: all 0.5s ease;
-}
-
-.business-card-modern:hover .business-icon-modern svg {
-    stroke: #FFFFFF;
-    fill: #FFFFFF;
-    transform: scale(1.1) rotate(-5deg);
-    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
-}
-
-.business-card-modern:hover .business-icon-modern svg [fill="currentColor"] {
-    fill: #FFFFFF;
-}
-
-/* Individual icon animations on hover */
-.business-card-modern:hover .icon-video svg {
-    animation: videoPlay 1s ease-in-out infinite;
-}
-
-@keyframes videoPlay {
-    0%, 100% { transform: scale(1.1) rotate(-5deg); }
-    50% { transform: scale(1.15) rotate(-2deg); }
-}
-
-.business-card-modern:hover .icon-it svg {
-    animation: chipPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes chipPulse {
-    0%, 100% { transform: scale(1.1) rotate(-5deg); }
-    50% { transform: scale(1.05) rotate(0deg); }
-}
-
-.business-card-modern:hover .icon-racing svg {
-    animation: starSpin 2s linear infinite;
-}
-
-@keyframes starSpin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.business-card-modern:hover .icon-pet svg {
-    animation: pawBounce 0.8s ease-in-out infinite;
-}
-
-@keyframes pawBounce {
-    0%, 100% { transform: scale(1.1) translateY(0); }
-    50% { transform: scale(1.15) translateY(-3px); }
-}
-
-/* Individual Icon Colors - Modern Gradient Style */
-.business-icon-modern.icon-video {
-    background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(255, 140, 66, 0.1));
-}
-
-.business-icon-modern.icon-it {
-    background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(255, 163, 102, 0.1));
-}
-
-.business-icon-modern.icon-racing {
-    background: linear-gradient(135deg, rgba(255, 107, 0, 0.15), rgba(204, 85, 0, 0.1));
-}
-
-.business-icon-modern.icon-pet {
-    background: linear-gradient(135deg, rgba(204, 85, 0, 0.1), rgba(255, 107, 0, 0.1));
-}
-
 .business-card-modern h3 {
-    font-size: 1.75rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
     color: var(--color-text-primary);
     position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all var(--transition-normal);
+}
+
+.business-card-modern:hover h3 {
+    transform: translateX(5px);
+}
     z-index: 1;
 }
 
