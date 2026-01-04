@@ -4,39 +4,25 @@
 # ========================================
 
 # Enable Rewrite Engine
-RewriteEngine On
-RewriteBase /
-
-# ========================================
-# Security Headers
-# ========================================
-<IfModule mod_headers.c>
-    # Prevent clickjacking
-    Header set X-Frame-Options "SAMEORIGIN"
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
     
-    # XSS Protection
-    Header set X-XSS-Protection "1; mode=block"
+    # Remove .html extension from URLs
+    # If someone requests a .html file, redirect to without extension
+    RewriteCond %{THE_REQUEST} ^GET\ /(.*)\.html(\?|\ |$) [NC]
+    RewriteRule ^(.*)\.html$ /$1 [R=301,L,NE]
     
-    # Prevent MIME type sniffing
-    Header set X-Content-Type-Options "nosniff"
+    # Serve .html file when extension is omitted
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
     
-    # Referrer Policy
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # Redirect root to Japanese by default
+    RewriteCond %{REQUEST_URI} ^/$
+    RewriteRule ^$ /jp/ [R=302,L]
 </IfModule>
-
-# ========================================
-# Remove .html Extension
-# ========================================
-
-# Redirect .html URLs to clean URLs
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-RewriteRule ^ /%1 [R=301,L,NE]
-
-# Serve .html files for clean URLs
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/?$ $1.html [L]
 
 # ========================================
 # Directory Index

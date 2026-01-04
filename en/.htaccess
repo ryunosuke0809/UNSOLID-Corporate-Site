@@ -1,18 +1,18 @@
 # UNSOLID Inc. - English Site Configuration
 
-RewriteEngine On
-RewriteBase /en/
-
-# Remove .html extension for English pages
-RewriteCond %{THE_REQUEST} \s/+en/(.+?)\.html[\s?] [NC]
-RewriteRule ^ /en/%1 [R=301,L,NE]
-
-# Serve .html files for clean URLs
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+?)/?$ $1.html [L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /en/
+    
+    # Remove .html extension
+    RewriteCond %{THE_REQUEST} ^GET\ /en/(.*)\.html(\?|\ |$) [NC]
+    RewriteRule ^(.*)\.html$ /en/$1 [R=301,L,NE]
+    
+    # Serve .html files for clean URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
 
 DirectoryIndex index.html
-Options -Indexes
-AddDefaultCharset UTF-8
