@@ -293,7 +293,7 @@ header.scrolled {
 
 .nav-item.active > .nav-link,
 .nav-link.active {
-    color: var(--color-text-primary);
+    color: var(--color-accent-primary);
 }
 
 .dropdown {
