@@ -1,0 +1,18 @@
+# UNSOLID Inc. - Japanese Site Configuration
+
+RewriteEngine On
+RewriteBase /jp/
+
+# Remove .html extension for Japanese pages
+RewriteCond %{THE_REQUEST} \s/+jp/(.+?)\.html[\s?] [NC]
+RewriteRule ^ /jp/%1 [R=301,L,NE]
+
+# Serve .html files for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+DirectoryIndex index.html
+Options -Indexes
+AddDefaultCharset UTF-8
