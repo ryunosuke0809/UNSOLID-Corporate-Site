@@ -778,62 +778,143 @@ header.scrolled {
 }
 
 .business-icon-modern {
-    --icon-mask: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 1.25rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 1.5rem;
     margin-bottom: var(--spacing-md);
-    background: linear-gradient(135deg, rgba(255, 107, 0, 0.15), rgba(255, 140, 66, 0.25));
-    box-shadow: inset 0 0 0 1px rgba(255, 107, 0, 0.3), 0 10px 24px rgba(0, 0, 0, 0.5);
-    color: var(--color-accent-primary);
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-border);
     position: relative;
     z-index: 1;
-    transition: all var(--transition-normal);
-}
-
-.business-card-modern:hover .business-icon-modern {
-    transform: scale(1.1) rotateY(180deg);
-    box-shadow: inset 0 0 0 1px rgba(255, 107, 0, 0.5), 0 15px 35px rgba(255, 107, 0, 0.4);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    overflow: hidden;
 }
 
 .business-icon-modern::before {
     content: '';
-    width: 24px;
-    height: 24px;
-    display: block;
-    background: currentColor;
-    mask-image: var(--icon-mask);
-    -webkit-mask-image: var(--icon-mask);
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-position: center;
-    mask-size: contain;
-    -webkit-mask-size: contain;
-    opacity: 0.85;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: -1;
 }
 
+.business-icon-modern::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: var(--gradient-primary);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.business-card-modern:hover .business-icon-modern {
+    transform: scale(1.15) rotate(5deg);
+    border-color: transparent;
+    box-shadow: 0 0 30px rgba(255, 107, 0, 0.5);
+}
+
+.business-card-modern:hover .business-icon-modern::before {
+    transform: translate(-50%, -50%) scale(2);
+}
+
+.business-card-modern:hover .business-icon-modern::after {
+    opacity: 1;
+}
+
+/* Icon SVG Content */
+.business-icon-modern svg {
+    width: 2rem;
+    height: 2rem;
+    stroke: var(--color-accent-primary);
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.business-icon-modern svg path,
+.business-icon-modern svg rect,
+.business-icon-modern svg circle,
+.business-icon-modern svg ellipse {
+    transition: all 0.5s ease;
+}
+
+.business-card-modern:hover .business-icon-modern svg {
+    stroke: #FFFFFF;
+    fill: #FFFFFF;
+    transform: scale(1.1) rotate(-5deg);
+    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.3));
+}
+
+.business-card-modern:hover .business-icon-modern svg [fill="currentColor"] {
+    fill: #FFFFFF;
+}
+
+/* Individual icon animations on hover */
+.business-card-modern:hover .icon-video svg {
+    animation: videoPlay 1s ease-in-out infinite;
+}
+
+@keyframes videoPlay {
+    0%, 100% { transform: scale(1.1) rotate(-5deg); }
+    50% { transform: scale(1.15) rotate(-2deg); }
+}
+
+.business-card-modern:hover .icon-it svg {
+    animation: chipPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes chipPulse {
+    0%, 100% { transform: scale(1.1) rotate(-5deg); }
+    50% { transform: scale(1.05) rotate(0deg); }
+}
+
+.business-card-modern:hover .icon-racing svg {
+    animation: starSpin 2s linear infinite;
+}
+
+@keyframes starSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.business-card-modern:hover .icon-pet svg {
+    animation: pawBounce 0.8s ease-in-out infinite;
+}
+
+@keyframes pawBounce {
+    0%, 100% { transform: scale(1.1) translateY(0); }
+    50% { transform: scale(1.15) translateY(-3px); }
+}
+
+/* Individual Icon Colors - Modern Gradient Style */
 .business-icon-modern.icon-video {
-    color: #FF8C42;
-    --icon-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='3' y='6' width='11' height='12' rx='3' fill='%23000'/%3E%3Cpath d='M17 9.5 21 7v10l-4-2.5z' fill='%23000'/%3E%3C/svg%3E");
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.1), rgba(255, 140, 66, 0.1));
 }
 
 .business-icon-modern.icon-it {
-    color: #FFA366;
-    --icon-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='6' y='6' width='12' height='12' rx='3' fill='%23000'/%3E%3Crect x='9' y='9' width='6' height='6' rx='2' fill='%23000'/%3E%3Crect x='3' y='9' width='2' height='6' rx='1' fill='%23000'/%3E%3Crect x='19' y='9' width='2' height='6' rx='1' fill='%23000'/%3E%3Crect x='9' y='3' width='6' height='2' rx='1' fill='%23000'/%3E%3Crect x='9' y='19' width='6' height='2' rx='1' fill='%23000'/%3E%3C/svg%3E");
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(255, 163, 102, 0.1));
 }
 
 .business-icon-modern.icon-racing {
-    color: #FF6B00;
-    --icon-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3c2.76 3.74 5 6.79 5 9.5A5 5 0 0 1 7 12.5C7 9.79 9.24 6.74 12 3z' fill='%23000'/%3E%3Cpath d='M17 13a5 5 0 1 1-10 0h10z' fill='%23000'/%3E%3C/svg%3E");
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.15), rgba(204, 85, 0, 0.1));
 }
 
 .business-icon-modern.icon-pet {
-    color: #CC5500;
-    --icon-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='14' r='4.5' fill='%23000'/%3E%3Ccircle cx='8.5' cy='9.5' r='1.8' fill='%23000'/%3E%3Ccircle cx='15.5' cy='9.5' r='1.8' fill='%23000'/%3E%3Ccircle cx='10.5' cy='7.5' r='1.4' fill='%23000'/%3E%3Ccircle cx='13.5' cy='7.5' r='1.4' fill='%23000'/%3E%3C/svg%3E");
+    background: linear-gradient(135deg, rgba(204, 85, 0, 0.1), rgba(255, 107, 0, 0.1));
 }
 
 .business-card-modern h3 {
