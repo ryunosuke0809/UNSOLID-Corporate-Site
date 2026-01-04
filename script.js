@@ -12,7 +12,52 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initSmoothScroll();
     initMobileMenu();
+    initParallaxEffect();
+    initScrollIndicator();
 });
+
+// ========================================
+// Parallax Effect for Hero Section
+// ========================================
+function initParallaxEffect() {
+    const heroBg = document.querySelector('.hero-gradient-bg');
+    const heroContent = document.querySelector('.hero-dynamic .hero-content');
+    
+    if (!heroBg || !heroContent) return;
+    
+    window.addEventListener('scroll', function() {
+        const scrollY = window.pageYOffset;
+        const speed = 0.5;
+        
+        // Move background slower than scroll
+        heroBg.style.transform = `translateY(${scrollY * speed}px)`;
+        
+        // Fade out content as you scroll
+        const opacity = Math.max(0, 1 - (scrollY / 500));
+        heroContent.style.opacity = opacity;
+    });
+}
+
+// ========================================
+// Scroll Indicator Hide on Scroll
+// ========================================
+function initScrollIndicator() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (!scrollIndicator) return;
+    
+    window.addEventListener('scroll', function() {
+        const scrollY = window.pageYOffset;
+        
+        if (scrollY > 100) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.pointerEvents = 'none';
+        } else {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.pointerEvents = 'auto';
+        }
+    });
+}
 
 // ========================================
 // Header Scroll Effect
