@@ -296,6 +296,22 @@ header.scrolled {
     color: var(--color-accent-primary);
 }
 
+.nav-item {
+    position: relative;
+}
+
+/* Add padding area between nav item and dropdown to prevent closing */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.75rem;
+    background: transparent;
+    z-index: 999;
+}
+
 .dropdown {
     position: absolute;
     top: calc(100% + 0.75rem);
@@ -313,24 +329,18 @@ header.scrolled {
     visibility: hidden;
     pointer-events: none;
     transform: translateY(10px);
-    transition: opacity var(--transition-normal), transform var(--transition-normal);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.3s;
     z-index: 1000;
 }
 
 .nav-item:hover .dropdown,
-.nav-item:focus-within .dropdown {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transform: translateY(0);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
-}
-
-/* Keep dropdown open while hovering over it */
+.nav-item:focus-within .dropdown,
 .dropdown:hover {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transform: translateY(0);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0s;
 }
 
 .dropdown a {
