@@ -893,7 +893,7 @@ header.scrolled {
 
 .hero h1 {
     margin-bottom: var(--spacing-md);
-    background: linear-gradient(135deg, #FFFFFF 0%, var(--color-accent-secondary) 100%);
+    background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent-bright) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1226,7 +1226,7 @@ header.scrolled {
     margin-bottom: 1rem;
     color: var(--color-text-primary);
     font-weight: 700;
-    background: linear-gradient(135deg, #ffffff 0%, var(--color-accent-primary) 100%);
+    background: linear-gradient(135deg, var(--color-accent-primary) 0%, var(--color-accent-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
