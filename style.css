@@ -1,6 +1,6 @@
 /* ========================================
    UNSOLID Inc. Corporate Website
-   Racing Orange & Black - Bold & Energetic Design
+   Navy Blue & Tech - Professional & Dynamic Design
    ======================================== */
 
 /* ========== CSS RESET & BASE ========== */
@@ -11,35 +11,36 @@
 }
 
 :root {
-    /* Colors - Sophisticated Dark Base (not too dark) */
-    --color-bg-primary: #1a1a1a;
-    --color-bg-secondary: #222222;
-    --color-bg-tertiary: #2a2a2a;
+    /* Colors - Modern Tech Base */
+    --color-bg-primary: #0a0e14;
+    --color-bg-secondary: #0f1419;
+    --color-bg-tertiary: #151b23;
     --color-bg-light: #FFFFFF;
     --color-text-primary: #FFFFFF;
-    --color-text-secondary: #B0B0B0;
-    --color-text-tertiary: #808080;
+    --color-text-secondary: #B0B8C4;
+    --color-text-tertiary: #808896;
     --color-text-dark: #0A0A0A;
     
-    /* UNSOLID Racing Orange Colors */
-    --color-accent-primary: #FF6B00;
-    --color-accent-secondary: #FF8C42;
-    --color-accent-dark: #CC5500;
-    --color-accent-light: #FFA366;
+    /* UNSOLID Navy Blue Colors - イメージカラー #133750 */
+    --color-accent-primary: #133750;
+    --color-accent-secondary: #1d4f75;
+    --color-accent-dark: #0d2438;
+    --color-accent-light: #2b6a9a;
+    --color-accent-bright: #4a8ec2;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #FF6B00 0%, #FF8C42 100%);
-    --gradient-racing: linear-gradient(135deg, #FF6B00 0%, #CC5500 100%);
-    --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
-    --gradient-subtle: linear-gradient(135deg, rgba(255, 107, 0, 0.05) 0%, rgba(255, 140, 66, 0.03) 100%);
-    --gradient-overlay: linear-gradient(180deg, rgba(26, 26, 26, 0.9) 0%, rgba(34, 34, 34, 0.95) 100%);
+    --gradient-primary: linear-gradient(135deg, #133750 0%, #1d4f75 100%);
+    --gradient-tech: linear-gradient(135deg, #133750 0%, #0d2438 100%);
+    --gradient-dark: linear-gradient(135deg, #0a0e14 0%, #0f1419 100%);
+    --gradient-subtle: linear-gradient(135deg, rgba(19, 55, 80, 0.08) 0%, rgba(29, 79, 117, 0.05) 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(10, 14, 20, 0.9) 0%, rgba(15, 20, 25, 0.95) 100%);
     
     /* Borders & Shadows - Subtle for dark theme */
-    --color-border: #333333;
+    --color-border: #1f2937;
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.5);
-    --shadow-orange: 0 4px 20px rgba(255, 107, 0, 0.3);
+    --shadow-blue: 0 4px 20px rgba(19, 55, 80, 0.4);
     
     /* Typography */
     --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -551,10 +552,10 @@ header.scrolled {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 30%, rgba(255, 107, 0, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(255, 140, 66, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(255, 107, 0, 0.08) 0%, transparent 70%),
-        linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        radial-gradient(circle at 20% 30%, rgba(19, 55, 80, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(29, 79, 117, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(43, 106, 154, 0.1) 0%, transparent 70%),
+        linear-gradient(135deg, #0a0e14 0%, #040508 100%);
     animation: gradientFlow 15s ease infinite;
     z-index: 0;
 }
@@ -610,12 +611,12 @@ header.scrolled {
 
 @keyframes badgePulse {
     0%, 100% {
-        box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
-        border-color: rgba(255, 107, 0, 0.3);
+        box-shadow: 0 0 20px rgba(19, 55, 80, 0.4);
+        border-color: rgba(19, 55, 80, 0.3);
     }
     50% {
-        box-shadow: 0 0 40px rgba(255, 107, 0, 0.5);
-        border-color: rgba(255, 107, 0, 0.6);
+        box-shadow: 0 0 40px rgba(29, 79, 117, 0.6);
+        border-color: rgba(29, 79, 117, 0.6);
     }
 }
 
@@ -829,7 +830,7 @@ header.scrolled {
 .btn-primary {
     background: var(--gradient-primary);
     color: #FFFFFF;
-    box-shadow: var(--shadow-orange);
+    box-shadow: var(--shadow-blue);
     position: relative;
     overflow: hidden;
 }
@@ -854,8 +855,8 @@ header.scrolled {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(255, 107, 0, 0.6);
-    background: var(--gradient-racing);
+    box-shadow: 0 6px 30px rgba(19, 55, 80, 0.7);
+    background: var(--gradient-tech);
 }
 
 .btn-secondary {
@@ -943,7 +944,7 @@ header.scrolled {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255,107,0,0.05) 0%, rgba(255,140,66,0.02) 100%);
+    background: linear-gradient(135deg, rgba(19,55,80,0.08) 0%, rgba(29,79,117,0.04) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 0;
@@ -956,7 +957,7 @@ header.scrolled {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,107,0,0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(19,55,80,0.15) 0%, transparent 70%);
     opacity: 0;
     transition: all 0.6s ease;
     z-index: 0;
@@ -966,8 +967,8 @@ header.scrolled {
     transform: translateY(-8px);
     box-shadow: 
         0 20px 40px rgba(0, 0, 0, 0.15),
-        0 0 60px rgba(255, 107, 0, 0.1);
-    border-color: rgba(255,107,0,0.4);
+        0 0 60px rgba(19, 55, 80, 0.2);
+    border-color: rgba(19,55,80,0.5);
 }
 
 .business-card-modern:hover::before {
