@@ -210,6 +210,29 @@ section.bg-light p {
     color: #4a5568;
 }
 
+/* UNSOLID Color Accent for Headings */
+section.bg-white h2,
+section.bg-light h2 {
+    color: var(--color-accent-primary);
+}
+
+section.bg-white .section-title,
+section.bg-light .section-title {
+    color: var(--color-accent-primary);
+}
+
+/* Links on white/light backgrounds */
+section.bg-white a:not(.btn),
+section.bg-light a:not(.btn) {
+    color: var(--color-accent-primary);
+    font-weight: 500;
+}
+
+section.bg-white a:not(.btn):hover,
+section.bg-light a:not(.btn):hover {
+    color: var(--color-accent-secondary);
+}
+
 /* ========== HEADER - Clean White Style ========== */
 header {
     position: fixed;
