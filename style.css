@@ -168,6 +168,48 @@ section {
     position: relative;
 }
 
+/* White Background Section */
+section.bg-white {
+    background-color: #FFFFFF;
+    color: var(--color-text-dark);
+}
+
+section.bg-white h1,
+section.bg-white h2,
+section.bg-white h3,
+section.bg-white h4,
+section.bg-white h5,
+section.bg-white h6 {
+    color: var(--color-text-dark);
+}
+
+section.bg-white p {
+    color: #4a5568;
+}
+
+section.bg-white .section-eyebrow {
+    color: var(--color-accent-primary);
+}
+
+/* Light Gray Background Section */
+section.bg-light {
+    background-color: #f7fafc;
+    color: var(--color-text-dark);
+}
+
+section.bg-light h1,
+section.bg-light h2,
+section.bg-light h3,
+section.bg-light h4,
+section.bg-light h5,
+section.bg-light h6 {
+    color: var(--color-text-dark);
+}
+
+section.bg-light p {
+    color: #4a5568;
+}
+
 /* ========== HEADER - Clean White Style ========== */
 header {
     position: fixed;
@@ -1018,6 +1060,37 @@ header.scrolled {
     margin-top: var(--spacing-md);
     position: relative;
     z-index: 1;
+}
+
+/* Business Card on White Background */
+.bg-white .business-card-modern,
+.bg-light .business-card-modern {
+    background: #FFFFFF;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bg-white .business-card-modern h3,
+.bg-light .business-card-modern h3 {
+    color: var(--color-text-dark);
+}
+
+.bg-white .business-card-modern p,
+.bg-light .business-card-modern p {
+    color: #4a5568;
+}
+
+.bg-white .business-card-modern:hover,
+.bg-light .business-card-modern:hover {
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 60px rgba(19, 55, 80, 0.15);
+    border-color: rgba(19,55,80,0.3);
+}
+
+.bg-white .business-card-modern::before,
+.bg-light .business-card-modern::before {
+    background: linear-gradient(135deg, rgba(19,55,80,0.03) 0%, rgba(29,79,117,0.02) 100%);
 }
 
 /* ========== FEATURE SECTION ========== */
