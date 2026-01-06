@@ -1,12 +1,12 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- UNSOLID Icon - Three diagonal slashes (compact for header) -->
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- UNSOLID Icon - Three diagonal slashes representing speed and motion -->
   
-  <!-- Top slash -->
-  <path d="M 28 5 L 34 5 L 16 40 L 10 40 Z" fill="currentColor"/>
+  <!-- Top slash (longest and thickest) -->
+  <path d="M 380 100 L 450 160 L 140 450 L 70 390 Z" fill="currentColor"/>
   
   <!-- Middle slash -->
-  <path d="M 24 12 L 30 12 L 12 47 L 6 47 Z" fill="currentColor"/>
+  <path d="M 320 200 L 390 260 L 80 550 L 10 490 Z" fill="currentColor"/>
   
   <!-- Bottom slash -->
-  <path d="M 32 8 L 38 8 L 20 43 L 14 43 Z" fill="currentColor"/>
+  <path d="M 440 150 L 510 210 L 200 500 L 130 440 Z" fill="currentColor"/>
 </svg>
