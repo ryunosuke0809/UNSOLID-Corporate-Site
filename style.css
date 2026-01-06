@@ -210,6 +210,40 @@ section.bg-light p {
     color: #4a5568;
 }
 
+/* UNSOLID Blue Background Section */
+section.bg-unsolid {
+    background: linear-gradient(135deg, #133750 0%, #1d4f75 100%);
+    color: #FFFFFF;
+}
+
+section.bg-unsolid h1,
+section.bg-unsolid h2,
+section.bg-unsolid h3,
+section.bg-unsolid h4,
+section.bg-unsolid h5,
+section.bg-unsolid h6 {
+    color: #FFFFFF;
+}
+
+section.bg-unsolid p {
+    color: #e2e8f0;
+}
+
+section.bg-unsolid .section-eyebrow {
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+/* UNSOLID Light Blue Background */
+section.bg-unsolid-light {
+    background: linear-gradient(135deg, rgba(19, 55, 80, 0.05) 0%, rgba(29, 79, 117, 0.03) 100%);
+    color: var(--color-text-dark);
+}
+
+section.bg-unsolid-light h2 {
+    color: var(--color-accent-primary);
+}
+
 /* UNSOLID Color Accent for Headings */
 section.bg-white h2,
 section.bg-light h2 {
@@ -251,8 +285,6 @@ header.scrolled {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     border-bottom: 1px solid #cbd5e0;
-}
-    border-bottom: 1px solid var(--color-border);
 }
 
 .header-content {
@@ -831,7 +863,7 @@ header.scrolled {
     height: 150%;
     background: 
         radial-gradient(circle at 30% 20%, rgba(19, 55, 80, 0.25) 0%, transparent 40%),
-        radial-gradient(circle at 70% 80%, rgba(255, 140, 66, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(29, 79, 117, 0.2) 0%, transparent 40%),
         radial-gradient(circle at 50% 50%, rgba(19, 55, 80, 0.1) 0%, transparent 60%);
     animation: gradientShift 20s ease infinite;
     pointer-events: none;
@@ -1121,6 +1153,27 @@ header.scrolled {
     background: linear-gradient(135deg, rgba(19,55,80,0.03) 0%, rgba(29,79,117,0.02) 100%);
 }
 
+/* Business Card on UNSOLID Background */
+.bg-unsolid .business-card-modern {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.bg-unsolid .business-card-modern h3 {
+    color: #FFFFFF;
+}
+
+.bg-unsolid .business-card-modern p {
+    color: #e2e8f0;
+}
+
+.bg-unsolid .business-card-modern:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-8px);
+}
+
 /* ========== FEATURE SECTION ========== */
 .feature-section {
     background: var(--color-bg-secondary);
@@ -1129,7 +1182,7 @@ header.scrolled {
 .feature-large {
     position: relative;
     padding: var(--spacing-lg);
-    background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,107,0,0.02) 100%);
+    background: linear-gradient(135deg, rgba(19,55,80,0.02) 0%, rgba(29,79,117,0.02) 100%);
     border: 1px solid var(--color-border);
     border-radius: 24px;
     transition: all var(--transition-normal);
