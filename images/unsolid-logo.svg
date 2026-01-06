@@ -1,0 +1,16 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- UNSOLID Logo - Three diagonal slashes -->
+  <g transform="translate(100, 50)">
+    <!-- Top slash -->
+    <path d="M 140 10 L 180 10 L 60 180 L 20 180 Z" fill="#1a3a52" />
+    
+    <!-- Middle slash -->
+    <path d="M 100 60 L 140 60 L 20 230 L -20 230 Z" fill="#1a3a52" />
+    
+    <!-- Bottom slash -->
+    <path d="M 180 30 L 220 30 L 100 200 L 60 200 Z" fill="#1a3a52" />
+  </g>
+  
+  <!-- UNSOLID Text -->
+  <text x="200" y="320" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#1a3a52" text-anchor="middle" letter-spacing="-1">UNSOLID</text>
+</svg>
